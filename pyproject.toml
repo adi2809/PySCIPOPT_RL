@@ -46,8 +46,7 @@ before-all = [
     "(apt-get update && apt-get install --yes wget) || yum install -y wget zlib libgfortran || brew install wget",
     "wget https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.1.0/libscip-linux.zip -O scip.zip",
     "unzip scip.zip",
-    "mv scip_install scip",
-    "rm scip/lib/libscip.a"
+    "mv scip_install scip"
     ]
 environment = { SCIPOPTDIR="$(pwd)/scip", LD_LIBRARY_PATH="$(pwd)/scip/lib:$LD_LIBRARY_PATH", DYLD_LIBRARY_PATH="$(pwd)/scip/lib:$DYLD_LIBRARY_PATH", PATH="$(pwd)/scip/bin:$PATH", PKG_CONFIG_PATH="$(pwd)/scip/lib/pkgconfig:$PKG_CONFIG_PATH"}
 
