@@ -8,6 +8,7 @@ if hasattr(os, 'add_dll_directory'):
 
 # export user-relevant objects:
 from pyscipopt.Multidict import multidict
+from pyscipopt.scip      import Cutsel
 from pyscipopt.scip      import Model
 from pyscipopt.scip      import Variable
 from pyscipopt.scip      import Constraint
