@@ -2180,6 +2180,18 @@ cdef class Model:
         """
         return SCIPgetSolvingTime(self._scip)
 
+    def getPrimalDualIntegral(self):
+        """
+        Retrieve the primal dual integral gap
+
+        Returns
+        -------
+        float
+
+        """
+        primaldualintegral = self._scip.stat.primaldualintegral
+        return primaldualintegral
+
     def getReadingTime(self):
         """
         Retrieve the current reading time in seconds.
